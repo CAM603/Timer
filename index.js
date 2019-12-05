@@ -3,13 +3,13 @@ let digitOne = document.getElementById('digitOne');
 let digitTwo = document.getElementById('digitTwo');
 let digitThree = document.getElementById('digitThree');
 let digitFour = document.getElementById('digitFour');
-console.log(digitOne)
+
 // Assign starting values
 let digitOneNum = 0;
 let digitTwoNum = 0;
 let digitThreeNum = 0;
 let digitFourNum = 0;
-console.log(digitThree)
+
 // Create function to start timer
 function start() {
     let timer = setInterval(function() {
@@ -38,10 +38,18 @@ function start() {
         }
         if (digitOneNum === 1) {
             clearInterval(timer);
-            colorRed();
+            
         }
 
     }, 10);
     
 }
 //start();
+
+// Create a start button for the first function
+let buttonOne = document.querySelector('.button, .one');
+buttonOne.addEventListener('click', () => {
+    start();
+}, {once : true});
+
+

@@ -166,7 +166,7 @@ p {
 .container .digits {
   display: flex;
   justify-content: center;
-  background: green;
+  background: slategray;
 }
 .container .digits .digit {
   font-size: 8rem;
@@ -174,7 +174,7 @@ p {
 .container .buttonContainer {
   display: flex;
   justify-content: space-around;
-  background: blue;
+  background: black;
 }
 .container .buttonContainer .buttons {
   display: flex;
