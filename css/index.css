@@ -176,3 +176,14 @@ p {
   justify-content: space-around;
   background: black;
 }
+.container .buttonContainer .button {
+  height: 60px;
+  width: 120px;
+  margin: 10px;
+  color: white;
+  background: blue;
+  font-size: 2rem;
+  border: solid 5px rgba(2, 2, 165, 0.534);
+  border-radius: 0.5rem;
+  outline: none;
+}
