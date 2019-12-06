@@ -1,3 +1,42 @@
+// Create button a component
+function buttonCreator(obj) {
+    // Create Elements
+    let buttonDiv = document.createElement('div');
+    let button = document.createElement('button');
+    // Add class
+    buttonDiv.classList.add('buttonDiv');
+    button.classList.add('button');
+    button.classList.add(obj.buttonClass);
+    // Add text content
+    button.textContent = obj.buttonText;
+    // Append
+    buttonDiv.appendChild(button);
+
+    // Add event listener
+    //button.addEventListener(obj.listener, obj.func);
+
+    return buttonDiv;
+}
+
+// Create buttons
+const buttonOne = buttonCreator({buttonClass: 'one', buttonText: 'Start'});
+
+const buttonTwo = buttonCreator({buttonClass: 'two', buttonText: 'Begin'});
+
+const buttonThree = buttonCreator({buttonClass: 'three', buttonText: 'Go'});
+
+// Add to DOM
+let buttons = document.querySelector('.buttonContainer');
+
+buttons.appendChild(buttonOne);
+buttons.appendChild(buttonTwo);
+buttons.appendChild(buttonThree);
+
+// Add event listeners
+buttonOne.addEventListener('click', () => {
+    start();
+}, {once : true})
+
 // Assign elements
 let digitOne = document.getElementById('digitOne');
 let digitTwo = document.getElementById('digitTwo');
@@ -44,12 +83,11 @@ function start() {
     }, 10);
     
 }
-//start();
 
-// Create a start button for the first function
-let buttonOne = document.querySelector('.button, .one');
-buttonOne.addEventListener('click', () => {
-    start();
-}, {once : true});
+// // Create a start button for the first function
+// let buttonOne = document.querySelector('.button, .one');
+// buttonOne.addEventListener('click', () => {
+//     start();
+// }, {once : true});
 
 
