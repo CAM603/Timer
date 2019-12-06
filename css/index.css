@@ -159,3 +159,30 @@ p {
   line-height: 1.5;
   font-size: 1rem;
 }
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.container .digits {
+  display: flex;
+  justify-content: center;
+  background: slategray;
+}
+.container .digits .digit {
+  font-size: 8rem;
+}
+.container .buttonContainer {
+  display: flex;
+  justify-content: space-around;
+  background: black;
+}
+.container .buttonContainer .buttons {
+  display: flex;
+  justify-content: center;
+  background: lightblue;
+  width: 30%;
+}
+.container .buttonContainer .buttons .button {
+  padding: 20px 40px;
+  background: slateblue;
+}
