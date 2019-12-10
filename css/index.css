@@ -159,24 +159,32 @@ p {
   line-height: 1.5;
   font-size: 1rem;
 }
-.container {
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: slateblue;
+}
+body .container {
   display: flex;
   flex-direction: column;
+  width: 50%;
 }
-.container .digits {
+body .container .digits {
   display: flex;
   justify-content: center;
   background: slategray;
 }
-.container .digits .digit {
+body .container .digits .digit {
   font-size: 8rem;
 }
-.container .buttonContainer {
+body .container .buttonContainer {
   display: flex;
   justify-content: space-around;
   background: black;
 }
-.container .buttonContainer .button {
+body .container .buttonContainer .button {
   height: 60px;
   width: 120px;
   margin: 10px;
