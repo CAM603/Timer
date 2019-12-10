@@ -1,32 +1,39 @@
-.container {
+body {
     display: flex;
-    //justify-content: center;
-    //align-items: center;
-    flex-direction: column;
-
-    .digits {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: slateblue;
+    .container {
         display: flex;
-        justify-content: center;
-        background: slategray;
-        .digit {
-            font-size: 8rem;
+        flex-direction: column;
+        width: 50%;
+    
+        .digits {
+            display: flex;
+            justify-content: center;
+            background: slategray;
+            .digit {
+                font-size: 8rem;
+            }
         }
-    }
-    .buttonContainer {
-        display: flex;
-        justify-content: space-around;
-        background: black;
-
-        .button {
-            height: 60px;
-            width: 120px;
-            margin: 10px;
-            color: white;
-            background: blue;
-            font-size: 2rem;
-            border: solid 5px rgba(2, 2, 165, 0.534);
-            border-radius: .5rem;
-            outline: none;
+        .buttonContainer {
+            display: flex;
+            justify-content: space-around;
+            background: black;
+    
+    
+            .button {
+                height: 60px;
+                width: 120px;
+                margin: 10px;
+                color: white;
+                background: blue;
+                font-size: 2rem;
+                border: solid 5px rgba(2, 2, 165, 0.534);
+                border-radius: .5rem;
+                outline: none;
+            }
         }
     }
 }

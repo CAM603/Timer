@@ -1,4 +1,4 @@
-// Create button a component
+// Create a button component
 function buttonCreator(obj) {
     // Create Elements
     let buttonDiv = document.createElement('div');
@@ -12,30 +12,26 @@ function buttonCreator(obj) {
     // Append
     buttonDiv.appendChild(button);
 
-    // Add event listener
-    //button.addEventListener(obj.listener, obj.func);
-
     return buttonDiv;
 }
 
-// Create buttons
-const buttonOne = buttonCreator({buttonClass: 'one', buttonText: 'Start'});
-
-const buttonTwo = buttonCreator({buttonClass: 'two', buttonText: 'Begin'});
-
-const buttonThree = buttonCreator({buttonClass: 'three', buttonText: 'Go'});
+// Create button
+const buttonStart = buttonCreator({buttonClass: 'one', buttonText: 'Start'});
+const buttonStop = buttonCreator({buttonClass: 'two', buttonText: 'Reset'})
 
 // Add to DOM
 let buttons = document.querySelector('.buttonContainer');
 
-buttons.appendChild(buttonOne);
-buttons.appendChild(buttonTwo);
-buttons.appendChild(buttonThree);
+buttons.appendChild(buttonStart);
+buttons.appendChild(buttonStop);
+
 
 // Add event listeners
-buttonOne.addEventListener('click', () => {
+buttonStart.addEventListener('click', () => {
     start();
-}, {once : true})
+}, {once : true});
+
+buttonStop.addEventListener('click', () => reset());
 
 // Assign elements
 let digitOne = document.getElementById('digitOne');
@@ -62,7 +58,7 @@ function start() {
             digitFourNum = 0;
         }
 
-        if (digitThreeNum === 10) {
+        if (digitThreeNum === 6) {
             digitThree.textContent = 0;
             digitTwoNum += 1;
             digitTwo.textContent = digitTwoNum;
@@ -77,17 +73,14 @@ function start() {
         }
         if (digitOneNum === 1) {
             clearInterval(timer);
-            
         }
-
+        
     }, 10);
-    
 }
 
-// // Create a start button for the first function
-// let buttonOne = document.querySelector('.button, .one');
-// buttonOne.addEventListener('click', () => {
-//     start();
-// }, {once : true});
-
-
+function reset() {
+    digitOne.textContent = '-' ;
+    digitTwo.textContent = '-' ;
+    digitThree.textContent = '-' ;
+    digitFour.textContent = '-' ;
+}
