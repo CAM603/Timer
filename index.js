@@ -58,7 +58,7 @@ function start() {
             digitFourNum = 0;
         }
 
-        if (digitThreeNum === 10) {
+        if (digitThreeNum === 6) {
             digitThree.textContent = 0;
             digitTwoNum += 1;
             digitTwo.textContent = digitTwoNum;
@@ -73,9 +73,8 @@ function start() {
         }
         if (digitOneNum === 1) {
             clearInterval(timer);
-            
         }
-
+        
     }, 10);
 }
 
